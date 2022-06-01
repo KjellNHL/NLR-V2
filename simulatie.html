@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/script.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <section class="wrapper flex">
+        <aside class="sidebar w-1/5 bg-slate-100">
+            <hr>
+            <ul>
+                <il class="p-1"><a href="index.html">Home</a></il>
+                <il class="p-1 active"><a href="simulatie.html">Simulatie</a></il>
+                <il class="p-1"><a href="index-stat.html">Statistieken</a></il>
+            </ul>
+            <a href="Cwizy.html"><hr></a>
+        </aside>
+        <main class="w-4/5 m-3 bg-slate-500">
+            <section class="simulatie-top flex">
+                <div id="simu" class="w-1/4">
+                    <div class="ml-3">
+                      <h2 class="text-2xl mx-1">
+                        Simulatie
+                    </h2>
+                    <span class="mx-1 mb-3">
+                        <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+                    </span>
+                    <br>
+                    <button class="bg-slate-300 rounded-xl p-1 mx-1 mb-1" id="button-start">Simulatie</button>
+                    <br>
+                    <button class="bg-slate-300 rounded-xl p-1 mx-1 mb-1" id="button-stop"><a href="simu-rit.html">bekijk resultaten</a></button>
+                    </div>
+                </div>
+                <section class="buttons flex">
+                    <button class="bg-slate-300 rounded-xl p-4 font-bold mx-1 mb-1">Versnellen</button>
+                        <button class="bg-slate-300 rounded-xl p-4 font-bold mx-1 mb-1">Vertragen</button>
+                        <button class="bg-slate-300 rounded-xl p-4 font-bold mx-1 mb-1">Impact</button>
+        
+                        <script>
+                          var elem = document.getElementById("impact");
+                          function toggleClass(){
+                          elem.classList.toggle("hide");  // Toggle hide class
+                          }
+                      </script>
+                        <button class="bg-slate-300 rounded-xl p-4 font-bold mx-1 mb-1">Wegdek</button>
+                        <script>
+                            var elem = document.getElementById("content");
+                            function toggleClass(){
+                            elem.classList.toggle("hide");  // Toggle hide class
+                            }
+                        </script>
+                        <button class="bg-slate-300 rounded-xl p-4 font-bold mx-1 mb-1" >Gewicht</button>
+                </section>
+                <section class="car">
+                    <img src="./imgs/Twizy-blue-side.png" class=" w-1/2 z-10 twizy" id="twizy">
+                    <div id="stage">
+                        <img url>
+                        <div id="road" class="z-0">
+                          <div id="stripes" class="z-0"></div>
+                        </div>
+                      </div>
+                </section>
+            </section>
+            <section class="graphs">
+                <div id="chart" class="w-1/4">
+                    <div id="logo">	<span class="speedometer"></span>
+                        <span class="needle"></span>
+                    </div>
+                </div>
+                <div id="window" class="w-1/4">
+                    <h3 class="text-xl mx-1">
+                        Impact voorruit:
+                    </h3>
+                    <img src="./img/windshield.png" class="w-4/5" id="Wind">
+                </div>
+                <div id="gravity" class="w-1/4">
+                    <h3 class="text-xl mx-1">
+                        Zwaartepunt:
+                    </h3>
+                    <img src="./img/car.jpg" id="myImage" class="w-4/5">
+                </div>
+            </section>
+        </main>
+    </section>
+</body>
+</html>
