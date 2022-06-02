@@ -11,78 +11,79 @@
 </head>
 <body>
     <section class="wrapper flex">
-        <aside class="sidebar w-1/5 bg-slate-100">
+        <aside class="sidebar w-1/5">
             <hr>
             <ul>
                 <il class="p-1"><a href="index.html">Home</a></il>
                 <il class="p-1 active"><a href="simulatie.html">Simulatie</a></il>
-                <il class="p-1"><a href="index-stat.html">Statistieken</a></il>
+                <il class="p-1"><a href="index-stat.html">Live Demo</a></il>
+                <div class="dropdown">
+                    <il class="dropbtn p-1"><a href="sim-rit.html">Statistieken</a></il>
+                    <div class="dropdown-content">
+                      <a href="sim-rit.html">Simulatie rit</a>
+                      <a href="opg-rit">Opgeslagen rit</a>
+                    </div>
+                  </div>
             </ul>
             <a href="Cwizy.html"><hr></a>
         </aside>
-        <main class="w-4/5 m-3 bg-slate-500">
+        <main class="w-4/5">
             <section class="simulatie-top flex">
                 <div id="simu" class="w-1/4">
                     <div class="ml-3">
-                      <h2 class="text-2xl mx-1">
+                      <h2 class="text-2xl">
                         Simulatie
                     </h2>
-                    <span class="mx-1 mb-3">
+                    <span>
                         <p><span id="seconds">00</span>:<span id="tens">00</span></p>
                     </span>
                     <br>
-                    <button class="bg-slate-300 rounded-xl p-1 mx-1 mb-1" id="button-start">Simulatie</button>
+                    <button class="bg-slate-500 text-white rounded-lg p-1 mx-1 mb-1" id="button-start">Simulatie</button>
                     <br>
-                    <button class="bg-slate-300 rounded-xl p-1 mx-1 mb-1" id="button-stop"><a href="simu-rit.html">bekijk resultaten</a></button>
+                    <button class="bg-slate-500 text-white rounded-lg p-1 mx-1 mb-1" id="button-stop"><a href="simu-rit.html">bekijk resultaten</a></button>
                     </div>
                 </div>
-                <section class="buttons flex">
-                    <button class="bg-slate-300 rounded-xl p-4 font-bold mx-1 mb-1">Versnellen</button>
-                        <button class="bg-slate-300 rounded-xl p-4 font-bold mx-1 mb-1">Vertragen</button>
-                        <button class="bg-slate-300 rounded-xl p-4 font-bold mx-1 mb-1">Impact</button>
-        
-                        <script>
-                          var elem = document.getElementById("impact");
-                          function toggleClass(){
-                          elem.classList.toggle("hide");  // Toggle hide class
-                          }
-                      </script>
-                        <button class="bg-slate-300 rounded-xl p-4 font-bold mx-1 mb-1">Wegdek</button>
-                        <script>
-                            var elem = document.getElementById("content");
-                            function toggleClass(){
-                            elem.classList.toggle("hide");  // Toggle hide class
-                            }
-                        </script>
-                        <button class="bg-slate-300 rounded-xl p-4 font-bold mx-1 mb-1" >Gewicht</button>
-                </section>
-                <section class="car">
-                    <img src="./imgs/Twizy-blue-side.png" class=" w-1/2 z-10 twizy" id="twizy">
-                    <div id="stage">
-                        <img url>
-                        <div id="road" class="z-0">
-                          <div id="stripes" class="z-0"></div>
-                        </div>
-                      </div>
+                <section class="buttons flex w-3/4 justify-between">
+                    <button class="bg-slate-500 text-white rounded-xl p-4 font-bold mx-1 mb-1 justify-center">Versnellen</button>
+                        <button class="bg-slate-500 text-white rounded-lg p-4 font-bold mx-1 mb-1">Vertragen</button>
+                        <button class="bg-slate-500 text-white rounded-lg p-4 font-bold mx-1 mb-1">Impact</button>
+                        <button class="bg-slate-500 text-white rounded-lg p-4 font-bold mx-1 mb-1">Wegdek</button>
+                        <button class="bg-slate-500 text-white rounded-lg p-4 font-bold mx-1 mb-1" >Gewicht</button>
                 </section>
             </section>
-            <section class="graphs">
-                <div id="chart" class="w-1/4">
-                    <div id="logo">	<span class="speedometer"></span>
-                        <span class="needle"></span>
+            <section class="simulatie-middle flex">
+                <img src="./imgs/Twizy-blue-side.png" class="z-10 " id="twizy">
+                <div id="stage">
+                    <img url>
+                    <div id="road" class="z-0">
+                      <div id="stripes" class="z-0"></div>
                     </div>
-                </div>
-                <div id="window" class="w-1/4">
-                    <h3 class="text-xl mx-1">
-                        Impact voorruit:
-                    </h3>
-                    <img src="./img/windshield.png" class="w-4/5" id="Wind">
-                </div>
-                <div id="gravity" class="w-1/4">
+                  </div>
+            </section>
+            <section class="simulatie-bottom flex">
+                <div id="gravity" class="w-1/4 border">
                     <h3 class="text-xl mx-1">
                         Zwaartepunt:
                     </h3>
-                    <img src="./img/car.jpg" id="myImage" class="w-4/5">
+                    <img src="./imgs/Twizy-top.png" id="myImage" class="twizy">
+                </div>
+                <div id="gravity" class="w-1/4 border">
+                    <h3 class="text-xl mx-1">
+                        Zwaartepunt:
+                    </h3>
+                    <img src="./imgs/Twizy-top.png" id="myImage" class="twizy">
+                </div>
+                <div id="gravity" class="w-1/4 border">
+                    <h3 class="text-xl mx-1">
+                        Zwaartepunt:
+                    </h3>
+                    <img src="./imgs/Twizy-top.png" id="myImage" class="twizy">
+                </div>
+                <div id="gravity" class="w-1/4 border">
+                    <h3 class="text-xl mx-1">
+                        Zwaartepunt:
+                    </h3>
+                    <img src="./imgs/Twizy-top.png" id="myImage" class="twizy">
                 </div>
             </section>
         </main>

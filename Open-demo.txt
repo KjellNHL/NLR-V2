@@ -1,0 +1,11 @@
+<section class="welcome mx-6 mt-6">
+
+          <h1 class="text-3xl font-bold">
+             Statistieken
+          </h1>
+          <span class="dot"></span> Live demo
+        </section>
+        <section class="flex">
+            <img src="./img/twizy.png" class="w-1/2">
+            <canvas id="ourChart" class="w-1/2" style="max-width:600px"></canvas>
+        </section>

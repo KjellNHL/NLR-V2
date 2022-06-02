@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/script.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <section class="wrapper flex">
+        <aside class="sidebar w-1/5">
+            <hr>
+            <ul>
+                <il class="p-1"><a href="index.html">Home</a></il>
+                <il class="p-1"><a href="simulatie.html">Simulatie</a></il>
+                <il class="p-1"><a href="index-stat.html">Live Demo</a></il>
+                <div class="dropdown">
+                    <il class="dropbtn p-1 active"><a href="sim-rit.html">Statistieken</a></il>
+                    <div class="dropdown-content">
+                      <a href="sim-rit.html active">Simulatie rit</a>
+                      <a href="opg-rit">Opgeslagen rit</a>
+                    </div>
+                  </div>
+            </ul>
+            <a href="Cwizy.html"><hr></a>
+        </aside>
+        <main class="w-4/5">
+            <section class="demo-top flex">
+                <section class="welcome mx-6 mt-6">
+
+                    <h1 class="text-3xl font-bold">
+                       Statistieken
+                    </h1>
+                    <span class="dot">Simulatie rit</span> 
+                    <button class="inline-block bg-slate-500 text-white rounded-lg p-1">
+                        16.05.2022 \/
+                    </button>
+                  </section>
+            </section>
+            <section class="flex demo-bottom">
+                <section class="demo-graphs w-1/5">
+                    <img src="./imgs/Twizy-top.png">
+                    <img src="./imgs/Twizy-top.png">
+                </section>
+                <section class="demo-car w-3/5">
+                    <img src="./imgs/Twizy-side-blue-circle-flip.png">
+                </section>
+                <section class="demo-graphs w-1/5">
+                    <img src="./imgs/Twizy-top.png">
+                    <img src="./imgs/Twizy-top.png">
+                </section>
+            </section>
+        </main>
+    </section>
+</body>
+</html>
