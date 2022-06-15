@@ -1,44 +1,32 @@
 body{
+    background-color: #D8DEEB;
     margin: 0;
     padding: 0;
-    background: rgb(142, 142, 142);
     color: #004D7D;
-}
-.sidebar{
-    display: flex;
-    background: rgb(241, 245, 249);
-    flex-shrink: 0;
-    flex-direction: column;
-    box-sizing: border-box;
     height: 100vh;
+    width: 100vw;
 }
-    .sidebar span{
-    font-size: calc(1.275rem + .3vw);
-    }
-    .sidebar hr{
-    margin: 1rem 0;
-    width: 100%;
-    opacity: .25;
-    border-top: 1px solid;
-    }
-    .sidebar ul{
-    margin-bottom: auto;
-    flex-direction: column;
-    display: flex;
-    }
-    .sidebar il{
-    display: list-item;
-    text-align: -webkit-match-parent;
-    font: 1.5em sans-serif;
-    list-style: none;
-    margin-bottom: 0.25rem;
-    padding-left: 5%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    }
+.aside-icon-1{
+    width: 10%;
+    display: inline-flex;
+    margin-right: 20px;
+  }
+  .aside-icon-2{
+    width: 50%;
+    display: inline-flex;
+  }
+  .mystyle {
+    display: none;
+  }
+  .thisstyle{
+    visibility: visible;
+  }
+  .sidebar{
+    transition: width 0.2s;
+}
     .active{
     background: rgb(255, 255, 255);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 15px;
     color: #19AEE9;
     }
     /* Dit is voor dropdown */
@@ -67,9 +55,34 @@ body{
         .dropdown:hover .dropdown-content {display: block;}
 
         .dropdown:hover .dropbtn {
-            background-color: #d8d5d5;
+            background-color: #b8b8b8;
             color: white;
         }
+        .fold-1{
+            width: 20%;
+        }
+        .fold-2{
+            width: 35%;
+        }
+        .fold-holder{
+            margin: 10px;
+        }
+        .aside-icon-1{
+            width: 10%;
+            display: inline-flex;
+            margin-right: 20px;
+          }
+          .aside-icon-2{
+            width: 30%;
+            display: inline-flex;
+          }
+        .none{
+            display: none;
+          }
+          .aside-click {
+            width: 100px;
+            height: 100vh;
+          }
     
       .weg-wrapper{
         height: 100vh;
@@ -85,26 +98,6 @@ body{
     }
     .simulatie-bottom{
         height: 30vh;
-        background: rgb(241, 245, 249);
-    }
-    .buttons button{
-        height: fit-content;
-        width: 25%;
-    }
-    .buttons{
-        align-items: center;
-        justify-content: center;
-    }
-    .simulatie-middle img{
-        margin: 0px auto;
-    }
-    .twizy{
-        width: 35%;
-        margin: 0px auto;
-    }
-    .border{
-        border-left: #19AEE9 solid 2.5px;
-        border-right: #19AEE9 solid 2.5px;
     }
     .sim-rit-top{
         height: 10vh;
@@ -116,31 +109,78 @@ body{
         width: 90%;
         margin: 0px auto;
     }
-    .sim-rit-buttons{
-        align-items: center;
-        justify-content: center;
-    }
-    .sim-rit-buttons il{
-        display: list-item;
-        list-style: none;
-        margin-bottom: 20px;
-    }
     .demo-top{
-        height: 10vh;
+        height: 20vh;
     }
     .demo-bottom{
-        height: 90vh;
+        height: 80vh;
     }
     .demo-car img{
         width: 90%;
         margin: 0px auto;
     }
-    .demo-car{
-        background: salmon;
+    .rock {
+        display: none;
+        }
+    .fly{
+        position: relative;
+        animation:animateright 6s infinite;
+        top: 65%;
     }
-    .demo-graphs img{
-        width: 50%;
-    }
-    .demo-graphs{
-        background: #19AEE9;
-    }
+        
+        @keyframes animateright{
+            from{right:100px;opacity:1} 
+            to{right:2000px;opacity:1}
+        }
+        .top{
+            position: relative;
+            animation:animatesright 6s infinite;
+            top: 20%;
+        }
+            
+            @keyframes animatesright{
+                from{right:100px;opacity:1} 
+                to{right:2000px;opacity:1}
+            }
+        .infinite{
+            position: relative;
+            width: 100%;
+            margin-top: -190px;
+            height: 160px;
+            background: #b8b8b8;
+            transform-origin: bottom;
+          }
+          .infinite::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg,#fff 0%, #fff 70%, #b8b8b8 70%, #b8b8b8 100%);
+            background-size: 120px;
+            animation: animate 0.5s linear infinite;
+          }
+          @keyframes animate{
+            0%
+            {
+              background-position: 0px;
+            }
+            100%
+            {
+              background-position: -120px;
+            }
+          }
+          .zwaarte-1{
+              margin-top:-100px;
+              margin-left: 50%;
+          }
+          .zwaarte-2{
+            margin-top:-130px;
+            margin-left: 45%;
+        }
+        .shield{
+            margin-top:-75px;
+            margin-left: 45%;
+        }

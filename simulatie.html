@@ -7,27 +7,29 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/script.js"></script>
-    <title>Home</title>
+    <title>Simulatie</title>
 </head>
 <body>
     <section class="wrapper flex">
-        <aside class="sidebar w-1/5">
-            <hr>
-            <ul>
-                <il class="p-1"><a href="index.html">Home</a></il>
-                <il class="p-1 active"><a href="simulatie.html">Simulatie</a></il>
-                <il class="p-1"><a href="index-stat.html">Live Demo</a></il>
-                <div class="dropdown">
-                    <il class="dropbtn p-1"><a href="sim-rit.html">Statistieken</a></il>
-                    <div class="dropdown-content">
-                      <a href="sim-rit.html">Simulatie rit</a>
-                      <a href="opg-rit">Opgeslagen rit</a>
-                    </div>
+        <aside class="sidebar w-1/5 flex flex-col bg-slate-100 shrink-0 box bg-white h-screen z-20" id="aside">
+            <hr class="m-4 w-1">
+            <ul id="ul" class="flex flex-col mb-auto">
+              <il class="list-item list-none text-2xl mb-1 p-4 "><a href="index.html"><img src="./imgs/home.svg" class="aside-icon-1" id="img-1"><span id="myDiv">Home</span></a></il>
+              <il class="list-item list-none text-2xl mb-1 p-4 active"><a href="simulatie.html"><img src="./imgs/simu.svg"class="aside-icon-1" id="img-2"><span id="span">Simulatie</span></a></il>
+              <il class="list-item list-none text-2xl mb-1 p-4 "><a href="Open-demo.html"><img src="./imgs/wifi.svg"class="aside-icon-1" id="img-3"><span id="this">Live Demo</span></a></il>
+              <div class="dropdown">
+                  <il class="list-item list-none text-2xl mb-1 dropbtn p-4 "><a href="sim-rit.html"><img src="./imgs/stat.svg"class="aside-icon-1" id="img-4"><span id="div">Statistieken</span></a></il>
+                  <div class="dropdown-content">
+                    <a href="sim-rit.html">Simulatie rit</a>
+                    <a href="opg-rit.html">Opgeslagen rit</a>
                   </div>
-            </ul>
-            <a href="Cwizy.html"><hr></a>
+                </div>
+          </ul>
+            <div class="fold-holder">
+              <img class="fold-1"  style="float: right;"src="./imgs/fold.svg" onclick="myFunction()">
+              </div>
         </aside>
-        <main class="w-4/5">
+        <main main class="w-4/5" id="main">
             <section class="simulatie-top flex">
                 <div id="simu" class="w-1/4">
                     <div class="ml-3">
@@ -38,52 +40,56 @@
                         <p><span id="seconds">00</span>:<span id="tens">00</span></p>
                     </span>
                     <br>
-                    <button class="bg-slate-500 text-white rounded-lg p-1 mx-1 mb-1" id="button-start">Simulatie</button>
+                    <button class="bg-white rounded-lg p-1 mx-1 mb-1" id="button-start">Start</button>
+                    <button class="bg-white rounded-lg p-1 mx-1 mb-1" id="button-stop">Stop</button>
                     <br>
-                    <button class="bg-slate-500 text-white rounded-lg p-1 mx-1 mb-1" id="button-stop"><a href="simu-rit.html">bekijk resultaten</a></button>
                     </div>
                 </div>
-                <section class="buttons flex w-3/4 justify-between">
-                    <button class="bg-slate-500 text-white rounded-xl p-4 font-bold mx-1 mb-1 justify-center">Versnellen</button>
-                        <button class="bg-slate-500 text-white rounded-lg p-4 font-bold mx-1 mb-1">Vertragen</button>
-                        <button class="bg-slate-500 text-white rounded-lg p-4 font-bold mx-1 mb-1">Impact</button>
-                        <button class="bg-slate-500 text-white rounded-lg p-4 font-bold mx-1 mb-1">Wegdek</button>
-                        <button class="bg-slate-500 text-white rounded-lg p-4 font-bold mx-1 mb-1" >Gewicht</button>
+                <section class="flex w-3/4 justify-between items-end justify-end">
+                    <button class="bg-white p-2 font-bold mx-1 mb-1 justify-center fit-content w-1/5" onclick="fastFunction()">Versnellen</button>
+                        <button class="bg-white p-2 font-bold mx-1 mb-1 fit-content w-1/5" onclick="slowFunction()">Vertragen</button>
+                        <button class="bg-white p-2 font-bold mx-1 mb-1 fit-content w-1/5" onclick="thatFunction()">Impact</button>
+                        <button class="bg-white p-2 font-bold mx-1 mb-1 fit-content w-1/5" onclick="thisFunction()">Wegdek</button>
+                        <button class="bg-white p-2 font-bold mx-1 mb-1 fit-content w-1/5" onclick="weightFunction()">Gewicht</button>
                 </section>
             </section>
             <section class="simulatie-middle flex">
-                <img src="./imgs/Twizy-blue-side.png" class="z-10 " id="twizy">
-                <div id="stage">
-                    <img url>
-                    <div id="road" class="z-0">
-                      <div id="stripes" class="z-0"></div>
-                    </div>
-                  </div>
+                <img src="./imgs/twizy-dark-blue-side-2.png" class="z-20 m-auto w-1/2" id="twiz">
+                <img src="./imgs/rock.png" class="w-1/6 h-1/6 rock z-10" id="rock">
+                <img src="./imgs/bird.png" class="w-1/6 h-1/6 rock z-10" id="bird">
             </section>
+            <div class="infinite w-1/1 z-0"></div>
             <section class="simulatie-bottom flex">
-                <div id="gravity" class="w-1/4 border">
+                <div id="gravity" class="w-2/12 bg-white m-2 text-center">
                     <h3 class="text-xl mx-1">
-                        Zwaartepunt:
+                        Impact voorruit
                     </h3>
-                    <img src="./imgs/Twizy-top.png" id="myImage" class="twizy">
+                    <img src="./imgs/sim-wind.png" class="p-2.5 m-auto">
+                    <img src="./imgs/Spot.png" class="w-1/6 rock" id="shield">
                 </div>
-                <div id="gravity" class="w-1/4 border">
+                <div id="gravity" class="w-2/12 bg-white m-2 text-center">
                     <h3 class="text-xl mx-1">
-                        Zwaartepunt:
+                        Zwaartepunt
                     </h3>
-                    <img src="./imgs/Twizy-top.png" id="myImage" class="twizy">
+                    <img src="./imgs/sim-top.png" class="w-1/2 m-auto">
+                    <img src="./imgs/Spot.png" class="w-1/6 rock" id="zwaarte">
                 </div>
-                <div id="gravity" class="w-1/4 border">
+                <div id="gravity" class="w-2/12 bg-white m-2 text-center justify-center">
                     <h3 class="text-xl mx-1">
-                        Zwaartepunt:
+                        Tempratuur
                     </h3>
-                    <img src="./imgs/Twizy-top.png" id="myImage" class="twizy">
+                    <img src="./imgs/sim-temp.png" class="p-2.5 m-auto">
                 </div>
-                <div id="gravity" class="w-1/4 border">
+                <div id="gravity" class="w-3/12 bg-white m-2 text-center flex">
+                    <img src="./imgs/sim-speed.png" class="w-1/2 py-3 px-1.5" id="speed">
+                    <img src="./imgs/sim-speed-fast.png" class="w-1/2 py-3 rock px-1.5" id="fast">
+                    <img src="./imgs/sim-speed-slow.png" class="w-1/2 py-3 rock px-1.5" id="slow">
+                    <img src="./imgs/sim-map.png" class="w-1/2 py-3 px-1.5">
+                </div>
+                <div id="gravity" class="w-3/12 m-2 text-center flex items-end justify-end">
                     <h3 class="text-xl mx-1">
-                        Zwaartepunt:
+                        <a href="sim-rit.html" class="bg-white p-2">Bekijk resultaten</a>
                     </h3>
-                    <img src="./imgs/Twizy-top.png" id="myImage" class="twizy">
                 </div>
             </section>
         </main>

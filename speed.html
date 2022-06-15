@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="./js/script.js"></script>
+    <title>Open Demo</title>
+</head>
+<body>
+    <section class="wrapper flex">
+      <aside class="sidebar w-1/5 flex flex-col bg-slate-100 shrink-0 box-border h-screen" id="aside">
+        <hr class="m-4 w-1">
+        <ul id="ul" class="flex flex-col mb-auto">
+          <il class="list-item list-none text-2xl mb-1 p-4 active"><a href="index.html"><img src="./imgs/home.svg" class="aside-icon-1" id="img-1"><span id="myDiv">Home</span></a></il>
+          <il class="list-item list-none text-2xl mb-1 p-4 "><a href="simulatie.html"><img src="./imgs/simu.svg"class="aside-icon-1" id="img-2"><span id="span">Simulatie</span></a></il>
+          <il class="list-item list-none text-2xl mb-1 p-4 "><a href="Open-demo.html"><img src="./imgs/wifi.svg"class="aside-icon-1" id="img-3"><span id="this">Live Demo</span></a></il>
+          <div class="dropdown">
+              <il class="list-item list-none text-2xl mb-1 dropbtn p-4 "><a href="sim-rit.html"><img src="./imgs/stat.svg"class="aside-icon-1" id="img-4"><span id="div">Statistieken</span></a></il>
+              <div class="dropdown-content">
+                <a href="sim-rit.html">Simulatie rit</a>
+                <a href="opg-rit.html">Opgeslagen rit</a>
+              </div>
+            </div>
+      </ul>
+        <div class="fold-holder">
+          <img class="fold-1"  style="float: right;"src="./imgs/fold.svg" onclick="myFunction()">
+          </div>
+    </aside>
+        <main class="w-4/5" id="main">
+            <section class="wrapper w-11/12 m-auto bg-slate-300">
+                <section class="mx-6 mt-6">
+                    <h1 class="text-3xl font-bold">
+                        Snelheid
+                     </h1>
+                </section>
+                <section class="welcome">
+                    <canvas id="ThisChart" class="w-1/2" style="max-width:600px"></canvas>
+                </section>
+                <script>
+                    var xValues = ["Summer", "Winter", "Fall", "Spring", "Cwizy"];
+                    var yValues = [55, 49, 44, 24, 15];
+                    var barColors = [
+                      "#b91d47",
+                      "#00aba9",
+                      "#2b5797",
+                      "#e8c3b9",
+                      "#1e7145"
+                    ];
+                    
+                    new Chart("ThisChart", {
+                      type: "pie",
+                      data: {
+                        labels: xValues,
+                        datasets: [{
+                          backgroundColor: barColors,
+                          data: yValues
+                        }]
+                      },
+                      options: {
+                        title: {
+                          display: true,
+                          text: "Flight hours"
+                        }
+                      }
+                    });
+                </script>
+            </section>
+        </main>
